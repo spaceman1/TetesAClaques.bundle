@@ -1,0 +1,28 @@
+{	
+	// Main menu
+	"FRENCH_MENU"				: "Épisodes en français",
+	"FRENCH_MENU_SUMMARY" 		: "Tous les épisodes de TêtesAClaques.TV en français enfin en quebecois :).\n\nIls sont regroupés par vote, date ou par séries.", 
+	
+	"ENGLISH_MENU" 				: "Épisodes en anglais",
+	"ENGLISH_MENU_SUMMARY" 		: "Tous les épisodes de TêtesAClaques.TV en anglais.\n\nIl y en a moins qu'en français et ne sont pas regroupés par séries.",
+	
+	// English or French Menu
+	"FRENCH_SECTION_TITLE"		: "Épisodes en français",
+	"ENGLISH_SECTION_TITLE"		: "Épisodes en anglais",		
+	
+	"SORT_BY_DATE" 				: "Classement par date",
+	"SORT_BY_DATE_SUMMARY" 		: "Tous les épisodes par ordre de sortie du plus récent au plus ancien.",
+	
+	"SORT_BY_VOTE" 				: "Classement par vote",
+	"SORT_BY_VOTE_SUMMARY"  	: "Tous les épisodes par ordre de préférence des visiteurs.",
+	
+	"SORT_BY_SERIES" 			: "Séries", 
+	"SORT_BY_SERIES_SUMMARY" 	: "Les épisodes regroupés par séries.",
+	
+	// Videos List
+	"SERIES_MENU_TITLE"			: "Liste des séries",
+	"EPISODE_LIST_VOTE_TITLE"	: "Classement par vote",
+	"EPISODE_LIST_DATE_TITLE"	: "Classement par date"
+	 
+	
+}

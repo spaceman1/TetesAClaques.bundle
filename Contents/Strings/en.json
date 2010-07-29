@@ -1,0 +1,26 @@
+{	
+	// Main menu
+	"FRENCH_MENU"				: "Episodes in French",
+	"FRENCH_MENU_SUMMARY" 		: "All the episodes from TAC.TV in French.. Uh in Quebeck French in fact :)\n\nVideos are sorted by vote, class and series.", 
+	
+	"ENGLISH_MENU" 				: "Episodes in English",
+	"ENGLISH_MENU_SUMMARY" 		: "All the episodes from TAC.TV in English. Less videos than French section and no sort by series.",
+	
+	// English or French Menu
+	"FRENCH_SECTION_TITLE"		: "Episodes in French",
+	"ENGLISH_SECTION_TITLE"		: "Episodes in English",		
+	
+	"SORT_BY_DATE" 				: "Sorted by date",
+	"SORT_BY_DATE_SUMMARY" 		: "All the episodes sorted by date from the most recent to the older.",
+	
+	"SORT_BY_VOTE" 				: "Sorted by vote",
+	"SORT_BY_VOTE_SUMMARY"  	: "All the episodes sorted by visitors preferences.",
+	
+	"SORT_BY_SERIES" 			: "Series", 
+	"SORT_BY_SERIES_SUMMARY" 	: "All the episodes grouped by series.",
+	
+	// Videos List
+	"SERIES_MENU_TITLE"			: "Series' list",
+	"EPISODE_LIST_VOTE_TITLE"	: "Sorted by vote",
+	"EPISODE_LIST_DATE_TITLE"	: "Sorted by date" 
+}
