@@ -8,9 +8,6 @@ Created on July 14, 2009
 '''
 
 # Import the parts of the Plex Media Server Plugin API we need
-from PMS import *
-from PMS.Objects import *
-from PMS.Shortcuts import *
 import lxml, re, sys, locale
 
 # Plugin parameters
@@ -34,7 +31,7 @@ PLUGIN_URL	= "http://www.tetesaclaques.tv/"
 ####################################################################################################
 
 def Start():
-	reload(sys)
+	#reload(sys)
 	sys.setdefaultencoding("utf-8")
 	
 	# Register our plugins request handler
@@ -90,7 +87,7 @@ def SerieListe(sender, cookie = None):
 	urldonneesHTML = PLUGIN_URL + "ajax/populerSliderIndex.php?serie=null&vid=null&vidToSlide=null&playOverlay=null&classification=date&selection=serie"
 	Log("urldonneesHTML %s" % urldonneesHTML)
 	
-	donneesHTML = XML.ElementFromURL(urldonneesHTML, isHTML=True, encoding="utf-8", headers ={'cookie' : cookie})
+	donneesHTML = HTML.ElementFromURL(urldonneesHTML, encoding="utf-8", headers ={'cookie' : cookie})
 	
 	for c in donneesHTML.xpath("//div[@id='size']"):
 		
@@ -161,7 +158,7 @@ def RecupererListe(sender, classification=None, cookie = None) :
 		compteurVideo = 0
 		
 		urldonneesHTML = PLUGIN_URL + "ajax/populerSliderIndex.php?serie=null&vid=null&vidToSlide="+ str(section*15) +"&playOverlay=null&classification=" + classification + "&selection=collection"
-		donneesHTML = XML.ElementFromURL(urldonneesHTML, isHTML=True, encoding="utf-8", headers ={'cookie' : cookie})
+		donneesHTML = HTML.ElementFromURL(urldonneesHTML, encoding="utf-8", headers ={'cookie' : cookie})
 		
 		for c in donneesHTML.xpath("//div[@class='size']"):
 			id = c.find("span").get("id")
