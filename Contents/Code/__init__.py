@@ -7,26 +7,25 @@ Created on July 14, 2009
 @author: Oncleben31
 '''
 
-# Import the parts of the Plex Media Server Plugin API we need
 import lxml, re, sys, locale
 
 # Plugin parameters
-PLUGIN_TITLE						= "Têtes à Claques.TV"			# The plugin Title
-PLUGIN_PREFIX   					= "/video/TAC.TV"				# The plugin's contextual path within Plex
+PLUGIN_TITLE = "Têtes à Claques.TV"			# The plugin Title
+PLUGIN_PREFIX = "/video/TAC.TV"				# The plugin's contextual path within Plex
 
 # Plugin Icons
-PLUGIN_ICON_DEFAULT					= "icon-default.png"
-FRENCH_SECTION_ICON                 = "frenchSpeaking.jpg"
-ENGLISH_SECTION_ICON                = "englishSpeaking.jpg"
-VOTE_SECTION_ICON                   = "vote.png"
-DATE_SECTION_ICON                   = "date.png"
-SERIES_SECTION_ICON                 = "series.png"
+PLUGIN_ICON_DEFAULT = "icon-default.png"
+FRENCH_SECTION_ICON = "frenchSpeaking.jpg"
+ENGLISH_SECTION_ICON = "englishSpeaking.jpg"
+VOTE_SECTION_ICON = "vote.png"
+DATE_SECTION_ICON = "date.png"
+SERIES_SECTION_ICON = "series.png"
 
 # Plugin Artwork
-PLUGIN_ARTWORK						= "art-default.jpg"
+PLUGIN_ARTWORK = "art-default.jpg"
 
 #Some URLs for the script
-PLUGIN_URL	= "http://www.tetesaclaques.tv/"
+PLUGIN_URL = "http://www.tetesaclaques.tv/"
 
 ####################################################################################################
 
@@ -94,7 +93,7 @@ def SerieListe(sender, cookie = None):
 		id = c.find("img").get("id").split("_")[0]
 		Log("id %s" % (id))
 		
-		nom = c.find("img").get("alt").encode("iso-8859-1").decode("utf-8")
+		nom = c.find("img").get("alt")
 		Log("nom %s" % (nom))
 		
 		shortThumb = c.find("img").get("src")
@@ -160,7 +159,7 @@ def RecupererListe(sender, classification=None, cookie = None) :
 		urldonneesHTML = PLUGIN_URL + "ajax/populerSliderIndex.php?serie=null&vid=null&vidToSlide="+ str(section*15) +"&playOverlay=null&classification=" + classification + "&selection=collection"
 		donneesHTML = HTML.ElementFromURL(urldonneesHTML, encoding="utf-8", headers ={'cookie' : cookie})
 		
-		for c in donneesHTML.xpath("//div[@class='size']"):
+		for c in donneesHTML.xpath("//div[@class='size some']"):
 			id = c.find("span").get("id")
 			Log("id %s" % (id))
 			
@@ -168,7 +167,7 @@ def RecupererListe(sender, classification=None, cookie = None) :
 			if id is None:
 				break
 			
-			nom = c.find("span").text.encode("iso-8859-1").decode("utf-8")
+			nom = c.find("span").text
 			Log("nom %s" % (nom))
 			
 			thumbAndMore = c.find("img").get("style")
